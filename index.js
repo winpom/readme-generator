@@ -3,59 +3,54 @@ const fs = require('fs');
 const inquirer = require("inquirer");
 
 // TODO: Create an array of questions for user input
-const questions = [];
-inquirer
-    .prompt([
-        {
-            type: "input",
-            message: "What would you like to Title your project?",
-            name: "title",
-        },
-        {
-            type: "input",
-            message: "What would you like the Description of your project to say?",
-            name: "description",
-        },
-        {
-            type: "input",
-            message: "What would you like the Installation Instructions section of your project to say?",
-            name: "installation",
-        },
-        {
-            type: "input",
-            message: "What would you like the Usage Information section of your project to say?",
-            name: "usage",
-        },
-        {
-            type: "input",
-            message: "What would you like the Contributing Guidelines section of your project to say?",
-            name: "contributing",
-        },
-        {
-            type: "input",
-            message: "What would you like the Test Instructions section of your project to say?",
-            name: "tests",
-        },
-        {
-            type: "list",
-            message: "Which license would you like to use for your project?",
-            name: "license",
-            choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT License", "BSD 2-Clause 'Simplified' License", "The Unilicense"],
-        },
-        {
-            type: "input",
-            message: "What is your GitHub username?",
-            name: "username",
-        },
-        {
-            type: "input",
-            message: "What is your email address?",
-            name: "email",
-        },
-    ])
-    .then((answers) => {
-        writeToFile(answers);
-    })
+const questions = [
+    {
+        type: "input",
+        message: "What would you like to Title your project?",
+        name: "title",
+    },
+    {
+        type: "input",
+        message: "What would you like the Description of your project to say?",
+        name: "description",
+    },
+    {
+        type: "input",
+        message: "What would you like the Installation Instructions section of your project to say?",
+        name: "installation",
+    },
+    {
+        type: "input",
+        message: "What would you like the Usage Information section of your project to say?",
+        name: "usage",
+    },
+    {
+        type: "input",
+        message: "What would you like the Contributing Guidelines section of your project to say?",
+        name: "contributing",
+    },
+    {
+        type: "input",
+        message: "What would you like the Test Instructions section of your project to say?",
+        name: "tests",
+    },
+    {
+        type: "list",
+        message: "Which license would you like to use for your project?",
+        name: "license",
+        choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT License", "BSD 2-Clause 'Simplified' License", "The Unilicense"],
+    },
+    {
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "username",
+    },
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "email",
+    },
+];
 
 const licenseBadges = {
     "Apache License 2.0": "[![License: Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)",
@@ -125,7 +120,12 @@ For questions about this project, please reach out to ${answers.email}. You can 
 
 // TODO: Create a function to initialize app
 function init() {
- }
+    inquirer
+        .prompt(questions)
+        .then((answers) => {
+            writeToFile(answers);
+        })
+}
 
 // Function call to initialize app
 init();

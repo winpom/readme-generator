@@ -1,10 +1,10 @@
 
-[![License: Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# esdf
+# README Generator
     
 ## Description
-wqwe
+A basic node.js function for creating quick, professional README documents
 
 ## Table of Contents
 - [Installation](#installation)
@@ -15,19 +15,19 @@ wqwe
 - [Questions](#questions)
     
 ## Installation
-qwewe
+Pull from GitHub
     
 ## Usage
-sdasdasd
+Use it
 
 ## Contributing
-bgbf
+Contribute
     
 ## Tests
-as
+Test it
     
 ## License
-This project is licensed under the Apache License 2.0. See the [Apache License 2.0]((https://www.apache.org/licenses/LICENSE-2.0)) file for details.
+This project is licensed under the MIT License. See the [MIT License]((https://opensource.org/licenses/MIT)) file for details.
    
 ## Questions
-For questions about this project, please reach out to awd. You can also find me on GitHub: [awed](https://github.com/awed)
+For questions about this project, please reach out to win@pom. You can also find me on GitHub: [winpom](https://github.com/winpom)
